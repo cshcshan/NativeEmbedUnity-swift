@@ -509,6 +509,7 @@
 					33193DC31CCDF5BB004776D2 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = QL662FZ3MK;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -774,6 +775,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -794,6 +796,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -816,6 +819,7 @@
 				33193DD81CCDF5BB004776D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,23 +20,23 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  @IBAction func onLoadUnity(sender: AnyObject) {
+  @IBAction func onLoadUnity(_ sender: AnyObject) {
     loadUnity()
   }
   
-  @IBAction func onCallUnity(sender: AnyObject) {
+  @IBAction func onCallUnity(_ sender: AnyObject) {
     UnitySendMessage("EventBus", "Trigger", "Hello World")
   }
   
   func loadUnity() {
     let unityView = UnityGetGLView()
     
-    self.view.addSubview(unityView)
-    unityView.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(unityView!)
+    unityView?.translatesAutoresizingMaskIntoConstraints = false
     
     let views = ["view": unityView];
-    let w = NSLayoutConstraint.constraintsWithVisualFormat("|[view]-20-|", options: [], metrics: nil, views: views);
-    let h = NSLayoutConstraint.constraintsWithVisualFormat("V:|-75-[view]-50-|", options: [], metrics: nil, views: views);
+    let w = NSLayoutConstraint.constraints(withVisualFormat: "|[view]-20-|", options: [], metrics: nil, views: views);
+    let h = NSLayoutConstraint.constraints(withVisualFormat: "V:|-75-[view]-50-|", options: [], metrics: nil, views: views);
     
     view.addConstraints(w + h)
   }

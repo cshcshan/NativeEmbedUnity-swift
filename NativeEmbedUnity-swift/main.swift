@@ -12,5 +12,7 @@ import UIKit
 // override @UIApplicationMain
 // http://stackoverflow.com/a/24021180/1060314
 
-custom_unity_init(Process.argc, Process.unsafeArgv)
-UIApplicationMain(Process.argc, Process.unsafeArgv, NSStringFromClass(UIApplication), NSStringFromClass(AppDelegate))
+custom_unity_init(CommandLine.argc, CommandLine.unsafeArgv)
+UIApplicationMain(CommandLine.argc,
+                  UnsafeMutableRawPointer(CommandLine.unsafeArgv).bindMemory(to: UnsafeMutablePointer<Int8>.self, capacity: Int(CommandLine.argc)),
+                  NSStringFromClass(UIApplication.self), NSStringFromClass(AppDelegate.self))
